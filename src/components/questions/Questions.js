@@ -18,7 +18,7 @@ const Questions = () => {
     const onSubmit = (data) => {
         const currentDate = format(new Date(), "k:mm dd/MM/yyy");
         data.date = currentDate;
-        axios.post(process.env.REACT_APP_API_URL, data).catch((rej) => console.log(rej));
+        axios.post(`${process.env.REACT_APP_API_URL}/questions`, data).catch((rej) => console.log(rej));
         reset();
     };
 
