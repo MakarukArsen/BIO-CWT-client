@@ -16,7 +16,7 @@ const Admin = () => {
     useEffect(() => {
         if (auth) {
             axios
-                .get("http://localhost:5000/questions")
+                .get(process.env.REACT_APP_API_URL)
                 .then((res) => setApiData(res.data))
                 .catch((rej) => console.log(rej));
         }
@@ -24,7 +24,7 @@ const Admin = () => {
 
     const handleDelete = (_id) => {
         axios
-            .delete(`http://localhost:5000/questions/${_id}`)
+            .delete(`${process.env.REACT_APP_API_URL}/${_id}`)
             .then(() => setRefresh(refresh + 1))
             .catch((rej) => console.log(rej));
     };
