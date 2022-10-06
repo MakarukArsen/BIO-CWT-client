@@ -1,0 +1,76 @@
+@use "../../styles/styles.scss";
+
+.admin {
+    padding: 50px 0px;
+    background-color: styles.$main-bg;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: styles.$white;
+    margin-bottom: 30px;
+}
+
+.search {
+    max-width: 100%;
+    height: 30px;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input {
+    background-color: rgba(000, 000, 000, 0);
+    height: 55px;
+    border: 3px solid styles.$form;
+    border-radius: 42px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 139.4%;
+    padding: 0px 25px 0px 25px;
+    outline: none;
+    color: styles.$grey;
+    font-family: 'Inter';
+
+    &:focus {
+        background-color: styles.$form-focus;
+        border: 3px solid styles.$brown;
+        color: styles.$main-bg;
+
+        &::placeholder {
+            color: styles.$main-bg;
+        }
+    }
+
+    &::placeholder {
+        color: styles.$grey;
+    }
+}
+
+.button {
+    height: 50px;
+    width: 100%;
+}

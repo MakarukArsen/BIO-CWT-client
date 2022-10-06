@@ -1,0 +1,42 @@
+@use "../../../styles/styles.scss";
+
+.button {
+    background-color: styles.$form;
+    border: none;
+    border-radius: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: #F5F5F5;
+    transition: .25s ease;
+
+    &:hover {
+        background-color: styles.$form-hover;
+        color: styles.$brown;
+    }
+
+    &_disabled {
+        background-color: styles.$form;
+        border: none;
+        border-radius: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: #F5F5F5;
+        transition: .25s ease;
+        filter: grayscale(1);
+    }
+}
+
+.button__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(20px + 10 * (100vw / 1440));
+    line-height: 36px;
+}

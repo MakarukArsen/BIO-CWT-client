@@ -1,0 +1,123 @@
+@use "../../styles/styles.scss";
+
+.footer {
+    color: styles.$white;
+    box-shadow: 0px -6px 52px rgba(245, 245, 245, 0.17);
+    padding: 20px 0px;
+}
+
+.footer__body {}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 30px;
+
+    @media(max-width:730px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
+
+.logoblock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+
+
+    &:hover {
+        .logo {
+            path {
+                stroke: styles.$text-hover;
+            }
+
+            rect {
+                stroke: styles.$text-hover;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    path {
+        stroke: styles.$white;
+        transition: .25s ease;
+    }
+
+    rect {
+        stroke: styles.$white;
+        transition: .25s ease;
+    }
+}
+
+.logo__text {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 139.4%;
+    color: styles.$white;
+    transition: .25s ease;
+
+    @media(max-width:520px) {
+        font-size: 25px;
+    }
+
+    &:hover {
+        color: styles.$text-hover;
+    }
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    fill: styles.$white;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+
+
+    path {
+        transition: .25s ease;
+    }
+}
+
+.address {
+    display: flex;
+    align-items: center;
+
+
+    path {
+        transition: .25s ease;
+    }
+}
+
+.copyright {
+    text-align: center;
+    color: styles.$grey;
+    font-size: 25px;
+}

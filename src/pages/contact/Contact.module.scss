@@ -1,0 +1,93 @@
+@use "../../styles/styles.scss";
+
+.contact {
+    margin-top: 100px;
+    padding: 50px 0px;
+}
+
+.contact__body {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 150px;
+
+    @media(max-width: 1024px) {
+        gap: 80px;
+    }
+
+    @media(max-width: 748px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.textBlock {
+    flex: 0 1 50%;
+    padding-bottom: 55px;
+
+    @media(max-width: 748px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.title {
+    margin-bottom: 100px;
+
+    @media(max-width: 748px) {
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: styles.$white;
+    transition: all .25s ease;
+
+    &:not(:last-child) {
+        margin-bottom: 33px;
+    }
+
+    &:hover {
+        color: styles.$text-hover;
+
+        svg {
+            fill: styles.$text-hover;
+        }
+    }
+
+    @media(max-width: 748px) {
+        font-size: 25px;
+
+    }
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    fill: styles.$white;
+    transition: all .25s ease;
+
+    @media(max-width: 748px) {
+        width: 30px;
+        height: 30px;
+
+    }
+}
+
+.map {
+    flex: 0 1 50%;
+
+    @media(max-width: 748px) {
+        flex: 1 1 350px
+    }
+
+    iframe {
+        border-radius: 40px;
+    }
+}

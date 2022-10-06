@@ -1,0 +1,51 @@
+@use "../../styles/styles.scss";
+
+.message {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: styles.$white;
+}
+
+.contactInfo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.name {
+    flex: 0 0 auto;
+}
+
+.phone {
+    flex: 0 0 auto;
+}
+
+.date {
+    flex: 0 0 auto;
+}
+
+.questions {}
+
+.button {
+    flex: 0 0 100px;
+    height: 40px;
+    border: 2px solid #df0a0a;
+    border-radius: 8px;
+    background-color: #df0a0a;
+    color: styles.$white;
+    transition: all .25s ease;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Inter';
+
+    &:hover {
+        color: #df0a0a;
+        background-color: styles.$white;
+    }
+}
